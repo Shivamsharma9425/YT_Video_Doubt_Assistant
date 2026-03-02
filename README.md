@@ -18,41 +18,8 @@ Instead of generic summaries, it answers specific doubts using the video's trans
 
 ---
 
-##  Architecture
 
-### PART 1 — Indexing Pipeline (Transcript Processing)
-YouTube Video
-        ↓
-Transcript API
-        ↓
-Full Transcript
-        ↓
-Text Splitter
-        ↓
-Chunk 1 | Chunk 2 | Chunk 3 | ...
-        ↓
-Embedding Model
-        ↓
-Vectors
-        ↓
-FAISS Vector Store 
-
-### PART 2 — Query-Time Pipeline (Live User Question)
-User Query
-        ↓
-Retriever (Semantic Search)
-        ↓
-Top-K Relevant Chunks (Context)
-        ↓
-Context + Question
-        ↓
-Prompt Template
-        ↓
-LLM (HuggingFace)
-        ↓
-Generated Answer
-        ↓
-Chrome Extension UI
+![Architecture](architecture/architecture.png)
 ---
 
 
