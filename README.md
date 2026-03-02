@@ -42,22 +42,21 @@ When a user asks a question:
 ## To Use as chrome Extension:
 
 🛠️ Backend Setup
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
+python -m venv venv->
+venv\Scripts\activate->
+pip install -r requirements.txt->
 
-Create .env inside backend:
+### Create .env inside backend:
 HUGGINGFACEHUB_API_TOKEN=your_token_here
 
-Run backend:
-uvicorn main:app --reload
-
+### Run backend:
+uvicorn main:app --reload->
 Open:http://127.0.0.1:8000/docs
 
-🌐 Load Chrome Extension
+### 🌐 Load Chrome Extension
 
-Open chrome://extensions
-Enable Developer Mode
-Click "Load unpacked"
-Select extension folder
+Open chrome://extensions->
+Enable Developer Mode->
+Click "Load unpacked"->
+Select extension folder->
 Ensure backend is running
