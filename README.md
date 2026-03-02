@@ -18,7 +18,7 @@ Instead of generic summaries, it answers specific doubts using the video's trans
 
 ---
 
-
+## Pipeline + Architecture
 ![Architecture](architecture/architecture.png)
 ---
 
