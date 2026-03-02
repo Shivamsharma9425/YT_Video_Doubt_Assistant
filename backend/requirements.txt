@@ -1,0 +1,30 @@
+# FastAPI Backend
+fastapi
+uvicorn[standard]
+
+# LangChain Ecosystem
+langchain
+langchain-core
+langchain-community
+langchain-huggingface
+langchain-text-splitters
+
+# Hugging Face
+transformers
+huggingface-hub
+sentence-transformers
+
+# Vector Store
+faiss-cpu
+
+# Transcript API
+youtube-transcript-api
+
+# Environment Variables
+python-dotenv
+
+# Utilities
+numpy
+scikit-learn
+tiktoken
+requests
