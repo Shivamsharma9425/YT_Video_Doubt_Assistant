@@ -20,27 +20,41 @@ Instead of generic summaries, it answers specific doubts using the video's trans
 
 ##  Architecture
 
-Chrome Extension (Frontend)  
-⬇  
-FastAPI Backend  
-⬇  
-Transcript Fetching  
-⬇  
-Text Chunking  
-⬇  
-Embeddings Generation  
-⬇  
-FAISS Vector Store  
-⬇  
-Retriever (Top-K Relevant Chunks)  
-⬇  
-Prompt Template  
-⬇  
-LLM (HuggingFace)  
-⬇  
-Structured Answer  
+### PART 1 — Indexing Pipeline (Transcript Processing)
+YouTube Video
+        ↓
+Transcript API
+        ↓
+Full Transcript
+        ↓
+Text Splitter
+        ↓
+Chunk 1 | Chunk 2 | Chunk 3 | ...
+        ↓
+Embedding Model
+        ↓
+Vectors
+        ↓
+FAISS Vector Store 
 
+### PART 2 — Query-Time Pipeline (Live User Question)
+User Query
+        ↓
+Retriever (Semantic Search)
+        ↓
+Top-K Relevant Chunks (Context)
+        ↓
+Context + Question
+        ↓
+Prompt Template
+        ↓
+LLM (HuggingFace)
+        ↓
+Generated Answer
+        ↓
+Chrome Extension UI
 ---
+
 
 ##  How It Works 
 
@@ -57,24 +71,6 @@ When a user asks a question:
 9. LLM generates contextual answer
 10. Answer returned to Chrome extension UI
 ---
-
-##  Project Structure
-
-YT_Video_Doubt_Assistant/
-│
-├── backend/
-│ ├── main.py
-│ ├── models.py
-│ ├── utils.py
-│ ├── requirements.txt
-│ ├── .env
-│
-├── manifest.json(for extension)
-├── popup.html
-├── popup.css
-├── popup.js
-├── icon.png
-└── .gitignore
 
 ## To Use as chrome Extension:
 
